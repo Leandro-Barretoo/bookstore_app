@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
 import MainPage from './components/MainPage';
 import SecondPage from './components/SecondPage';
 
