@@ -7,7 +7,7 @@ import Chapter from './Chapter';
 const BookCard = (props) => {
   const {
     bookid,
-    categorie,
+    category,
     title,
     author,
   } = props;
@@ -16,7 +16,7 @@ const BookCard = (props) => {
     <div className="Lesson-Panel">
       <BookInfo
         bookid={bookid}
-        categorie={categorie}
+        category={category}
         title={title}
         author={author}
       />
@@ -28,14 +28,14 @@ const BookCard = (props) => {
 
 BookCard.defaultProps = {
   bookid: '',
-  categorie: '',
+  category: '',
   title: '',
   author: '',
 };
 
 BookCard.propTypes = {
   bookid: PropTypes.string,
-  categorie: PropTypes.string,
+  category: PropTypes.string,
   title: PropTypes.string,
   author: PropTypes.string,
 };
