@@ -1,13 +1,14 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+import booksReducer from './books/books';
 
-function rootReducer(state = { books: [] }, action) {
-  switch (action.type) {
-    default:
-      return state;
-  }
-}
+const rootReducer = combineReducers({
+  booksReducer,
+});
 
-const store = createStore(rootReducer);
-window.store = store;
+const store = createStore(
+  rootReducer,
+  applyMiddleware(logger),
+);
 
 export default store;
