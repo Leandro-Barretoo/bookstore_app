@@ -1,0 +1,9 @@
+.Lesson-Panel {
+  border: solid 1px #e8e8e8;
+  margin: 3rem 7rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #fff;
+}
