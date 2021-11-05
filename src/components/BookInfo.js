@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './BookInfo.css';
 import BookActions from './BookActions';
 
 const BookInfo = (props) => {
@@ -11,10 +12,10 @@ const BookInfo = (props) => {
   } = props;
 
   return (
-    <div>
-      <span>{category}</span>
-      <span>{title}</span>
-      <span>{author}</span>
+    <div className="Info-Box">
+      <span className="Cat-Info Display-Block">{category}</span>
+      <span className="Tit-Info Display-Block Family-Roboto">{title}</span>
+      <span className="Auth-Info Display-Block Family-Roboto">{author}</span>
       <BookActions bookid={bookid} />
     </div>
   );
