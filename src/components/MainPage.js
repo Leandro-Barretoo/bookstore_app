@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import './MainPage.css';
 import Nav from './Nav';
 import BookCard from './BookCard';
 import Line from './Line';
@@ -25,8 +26,9 @@ const MainPage = () => {
   return (
     <div className="Panel-bg">
       <Nav />
+      <Line name="Line" />
       { myBooksArr }
-      <Line />
+      <Line name="Line-2" />
       <AddForm />
     </div>
   );

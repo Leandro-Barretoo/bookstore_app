@@ -1,0 +1,9 @@
+.Panel-bg {
+  display: flex;
+  flex-direction: column;
+  height: 68.563rem;
+  margin: 0 2.5rem 4.063rem 0;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fafafa;
+}
