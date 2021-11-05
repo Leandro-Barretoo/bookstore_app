@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+
+.Display-Block {
+  display: block;
+}
+
+.Family-Montserrat {
+  font-family: Montserrat, serif;
+}
+
+.Comp-Container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #e8e8e8;
+}
+
+.Oval-2 {
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid #307bbe;
+  border-radius: 50%;
+  border-left-color: #e8e8e8;
+  transform: rotate(45deg);
+}
+
+.Regtangle-3 {
+  padding: 15px;
+}
+
+.Percentage-Comp {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.Percentage {
+  font-size: 2rem;
+}
+
+.Comp {
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
