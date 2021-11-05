@@ -7,7 +7,7 @@ const rootReducer = combineReducers({
 });
 
 const fetchBooks = () => (dispatch) => {
-  fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ym9eiorepf3iLhrJ7Q7F/books')
+  fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oWMP1iS5uMQBHYqtCwUz/books')
     .then((response) => {
       response.json().then((data) => {
         const books = Object.entries(data);
