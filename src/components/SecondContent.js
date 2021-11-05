@@ -1,8 +1,9 @@
 import React from 'react';
+import './SecondContent.css';
 
 const SecondContent = () => (
-  <div>
-    <p>Under construction</p>
+  <div className="Under-Container">
+    <p className="Under-Text">Under construction</p>
   </div>
 );
 
