@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import './BookCard.css';
 import BookInfo from './BookInfo';
 import Completed from './Completed';
 import Chapter from './Chapter';

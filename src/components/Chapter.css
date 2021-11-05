@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;600&display=swap');
+
+.Family-Roboto {
+  font-family: 'Roboto Slab', serif;
+}
+
+.Chapter-Container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10rem;
+}
+
+.Curr-Title {
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: #121212;
+  padding: 5px 0;
+}
+
+.Curr-Chap {
+  padding: 5px 0;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+}
+
+.Blue-square {
+  margin: 10px 0;
+  padding: 10px 25px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  width: max-content;
+}
+
+.Update {
+  font-size: 0.813rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}

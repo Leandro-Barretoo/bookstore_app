@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;600&display=swap');
+
+.Btn-Container {
+  padding: 20px 10px 0 10px;
+}
+
+.Btn {
+  border: none;
+  font-family: 'Roboto Slab', serif;
+  background-color: transparent;
+  color: #4386bf;
+  padding: 0;
+  margin-right: 15px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  padding-right: 15px;
+  border-right: 1px solid #e8e8e8;
+}
+
+.Btn:last-child {
+  border: none;
+}

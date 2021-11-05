@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+import './AddForm.css';
 import { addBook } from '../redux/books/books';
 
 const AddForm = () => {
@@ -39,16 +40,16 @@ const AddForm = () => {
   };
 
   return (
-    <div>
-      <span>ADD NEW BOOK</span>
+    <div className="Form-Container">
+      <span className="Form-Title">ADD NEW BOOK</span>
       <form id="form">
-        <input className="TextInput" />
-        <select id="categories-input">
+        <input className="TextInput Form-Box" placeholder="Book title" />
+        <select id="categories-input" className="Select-Input Form-Box">
           <option value="action">Action</option>
           <option value="sci-fi">Sci-fi</option>
           <option value="economy">Economy</option>
         </select>
-        <button type="button" onClick={submitBookToStore}>ADD BOOK</button>
+        <button className="AddBook-Btn" type="button" onClick={submitBookToStore}>ADD BOOK</button>
       </form>
     </div>
   );
