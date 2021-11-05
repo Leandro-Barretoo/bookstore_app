@@ -5,16 +5,36 @@ import { addBook } from '../redux/books/books';
 
 const AddForm = () => {
   const dispatch = useDispatch();
-
   const submitBookToStore = () => {
     const form = document.getElementById('form');
-    const newBook = {
-      id: uuidv4(),
-      categorie: document.getElementById('categories-input').value,
-      title: document.getElementsByClassName('TextInput')[0].value,
-      author: 'unknown',
+
+    const newBook = [
+      uuidv4(),
+      [
+        {
+          category: document.getElementById('categories-input').value,
+          title: document.getElementsByClassName('TextInput')[0].value,
+        },
+      ],
+    ];
+
+    const postBooks = () => (dispatch) => {
+      dispatch(addBook(newBook));
+      fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oWMP1iS5uMQBHYqtCwUz/books', {
+        method: 'POST',
+        body: JSON.stringify({
+          item_id: newBook[0],
+          title: newBook[1][0].title,
+          category: newBook[1][0].category,
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => response);
     };
-    dispatch(addBook(newBook));
+
+    dispatch(postBooks());
     form.reset();
   };
 

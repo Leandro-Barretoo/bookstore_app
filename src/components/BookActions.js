@@ -8,7 +8,19 @@ const BookActions = (props) => {
   const { bookid } = props;
 
   const removeBookFromStore = () => {
-    dispatch(removeBook(bookid));
+    const deleteBooks = () => (dispatch) => {
+      dispatch(removeBook(bookid));
+      fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oWMP1iS5uMQBHYqtCwUz/books/${bookid}`, {
+        method: 'DELETE',
+        body: JSON.stringify({ item_id: `${bookid}` }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => response);
+    };
+
+    dispatch(deleteBooks());
   };
 
   return (

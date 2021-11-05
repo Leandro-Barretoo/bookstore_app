@@ -1,14 +1,28 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import logger from 'redux-logger';
-import booksReducer from './books/books';
+import thunk from 'redux-thunk';
+import booksReducer, { addBook } from './books/books';
 
 const rootReducer = combineReducers({
   booksReducer,
 });
 
+const fetchBooks = () => (dispatch) => {
+  fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oWMP1iS5uMQBHYqtCwUz/books')
+    .then((response) => {
+      response.json().then((data) => {
+        const books = Object.entries(data);
+        books.forEach((book) => {
+          dispatch(addBook(book));
+        });
+      });
+    });
+};
+
 const store = createStore(
   rootReducer,
-  applyMiddleware(logger),
+  applyMiddleware(thunk),
 );
+
+store.dispatch(fetchBooks());
 
 export default store;
